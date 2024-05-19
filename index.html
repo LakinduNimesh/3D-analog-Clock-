@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Analog clock</title>
+</head>
+
+<body>
+	<div class="clockContainer">
+		<div id="clock">
+
+			<div class="hands">
+				<div id="hour" class="hourHand">
+					<div class="hourShadow"></div>
+				</div>
+				<div id="minute" class="minuteHand">
+					<div class="minuteShadow"></div>
+				</div>
+				<div id="second" class="secondHand">
+					<div class="secondShadow"></div>
+					<div class="clockCenterNut"></div>
+				</div>
+				<div id="millisecond" class="millisecondHand">
+					<div class="millisecondHandShadow"></div>
+					<div class="millisecondHandStemShadow"></div>
+					<div class="millisecondHandStem"></div>
+				</div>
+			</div>
+
+			<div class="clockFace">
+				<div class="clockFaces clockFace1"></div>
+				<div class="clockFaces clockFace2"></div>
+				<div class="clockFaces clockFace3"></div>
+				<div class="clockFaces clockFace4"></div>
+				<div class="clockFaces clockFace5"></div>
+				<div class="clockFaces clockFace6"></div>
+				<div class="clockFaces clockFace7"></div>
+				<div class="clockFaces clockFace8"></div>
+				<div class="clockFaces clockFace9"></div>
+				<div class="clockFaces clockFace10"></div>
+				<div class="clockFaces clockFace11"></div>
+				<div class="clockFaces clockFace12"></div>
+				<div class="clockBack"></div>
+				<div class="clockShadow"></div>
+			</div>
+
+			<div id="amPMContainer">
+				<div class="amPM amPM1"></div>
+				<div class="amPM amPM2"></div>
+				<div class="amPM amPM3"></div>
+				<div class="amPM amPM4"></div>
+				<div class="amPM amPM5"></div>
+				<div class="amPM amPM6"></div>
+				<div class="amPM amPM7"></div>
+				<div class="amPM amPM8"></div>
+				<div class="amPM amPM9"></div>
+				<div class="amPM amPM10"></div>
+				<div class="amPM amPM11"></div>
+				<div class="amPM amPM12"></div>
+			</div>
+
+			<div class="numberContainers number1">
+				<div class="numbers numbersA">·</div>
+				<div class="numbers numbersB">·</div>
+				<div class="numbers numbersC">·</div>
+				<div class="numbers numbersD">·</div>
+				<div class="numbers numbersE">·</div>
+				<div class="numbers numbersF">·</div>
+				<div class="numbers numbersG">·</div>
+				<div class="numbers numbersH">·</div>
+				<div class="numbers numbersI">·</div>
+				<div class="numbers numbersJ">·</div>
+				<div class="numbers numbersK">·</div>
+				<div class="numbers numbersL">·</div>
+			</div>
+
+			<div class="numberContainers number2">
+				<div class="numbers numbersA">·</div>
+				<div class="numbers numbersB">·</div>
+				<div class="numbers numbersC">·</div>
+				<div class="numbers numbersD">·</div>
+				<div class="numbers numbersE">·</div>
+				<div class="numbers numbersF">·</div>
+				<div class="numbers numbersG">·</div>
+				<div class="numbers numbersH">·</div>
+				<div class="numbers numbersI">·</div>
+				<div class="numbers numbersJ">·</div>
+				<div class="numbers numbersK">·</div>
+				<div class="numbers numbersL">·</div>
+			</div>
+
+			<div class="numberContainers number3">
+				<div class="numbers numbersA">3</div>
+				<div class="numbers numbersB">3</div>
+				<div class="numbers numbersC">3</div>
+				<div class="numbers numbersD">3</div>
+				<div class="numbers numbersE">3</div>
+				<div class="numbers numbersF">3</div>
+				<div class="numbers numbersG">3</div>
+				<div class="numbers numbersH">3</div>
+				<div class="numbers numbersI">3</div>
+				<div class="numbers numbersJ">3</div>
+				<div class="numbers numbersK">3</div>
+				<div class="numbers numbersL">3</div>
+			</div>
+
+			<div class="numberContainers number4">
+				<div class="numbers numbersA">·</div>
+				<div class="numbers numbersB">·</div>
+				<div class="numbers numbersC">·</div>
+				<div class="numbers numbersD">·</div>
+				<div class="numbers numbersE">·</div>
+				<div class="numbers numbersF">·</div>
+				<div class="numbers numbersG">·</div>
+				<div class="numbers numbersH">·</div>
+				<div class="numbers numbersI">·</div>
+				<div class="numbers numbersJ">·</div>
+				<div class="numbers numbersK">·</div>
+				<div class="numbers numbersL">·</div>
+			</div>
+
+			<div class="numberContainers number5">
+				<div class="numbers numbersA">·</div>
+				<div class="numbers numbersB">·</div>
+				<div class="numbers numbersC">·</div>
+				<div class="numbers numbersD">·</div>
+				<div class="numbers numbersE">·</div>
+				<div class="numbers numbersF">·</div>
+				<div class="numbers numbersG">·</div>
+				<div class="numbers numbersH">·</div>
+				<div class="numbers numbersI">·</div>
+				<div class="numbers numbersJ">·</div>
+				<div class="numbers numbersK">·</div>
+				<div class="numbers numbersL">·</div>
+			</div>
+
+			<div class="numberContainers number6">
+				<div class="numbers numbersA">6</div>
+				<div class="numbers numbersB">6</div>
+				<div class="numbers numbersC">6</div>
+				<div class="numbers numbersD">6</div>
+				<div class="numbers numbersE">6</div>
+				<div class="numbers numbersF">6</div>
+				<div class="numbers numbersG">6</div>
+				<div class="numbers numbersH">6</div>
+				<div class="numbers numbersI">6</div>
+				<div class="numbers numbersJ">6</div>
+				<div class="numbers numbersK">6</div>
+				<div class="numbers numbersL">6</div>
+			</div>
+
+			<div class="numberContainers number7">
+				<div class="numbers numbersA">·</div>
+				<div class="numbers numbersB">·</div>
+				<div class="numbers numbersC">·</div>
+				<div class="numbers numbersD">·</div>
+				<div class="numbers numbersE">·</div>
+				<div class="numbers numbersF">·</div>
+				<div class="numbers numbersG">·</div>
+				<div class="numbers numbersH">·</div>
+				<div class="numbers numbersI">·</div>
+				<div class="numbers numbersJ">·</div>
+				<div class="numbers numbersK">·</div>
+				<div class="numbers numbersL">·</div>
+			</div>
+
+			<div class="numberContainers number8">
+				<div class="numbers numbersA">·</div>
+				<div class="numbers numbersB">·</div>
+				<div class="numbers numbersC">·</div>
+				<div class="numbers numbersD">·</div>
+				<div class="numbers numbersE">·</div>
+				<div class="numbers numbersF">·</div>
+				<div class="numbers numbersG">·</div>
+				<div class="numbers numbersH">·</div>
+				<div class="numbers numbersI">·</div>
+				<div class="numbers numbersJ">·</div>
+				<div class="numbers numbersK">·</div>
+				<div class="numbers numbersL">·</div>
+			</div>
+
+			<div class="numberContainers number9">
+				<div class="numbers numbersA">9</div>
+				<div class="numbers numbersB">9</div>
+				<div class="numbers numbersC">9</div>
+				<div class="numbers numbersD">9</div>
+				<div class="numbers numbersE">9</div>
+				<div class="numbers numbersF">9</div>
+				<div class="numbers numbersG">9</div>
+				<div class="numbers numbersH">9</div>
+				<div class="numbers numbersI">9</div>
+				<div class="numbers numbersJ">9</div>
+				<div class="numbers numbersK">9</div>
+				<div class="numbers numbersL">9</div>
+			</div>
+
+			<div class="numberContainers number10">
+				<div class="numbers numbersA">·</div>
+				<div class="numbers numbersB">·</div>
+				<div class="numbers numbersC">·</div>
+				<div class="numbers numbersD">·</div>
+				<div class="numbers numbersE">·</div>
+				<div class="numbers numbersF">·</div>
+				<div class="numbers numbersG">·</div>
+				<div class="numbers numbersH">·</div>
+				<div class="numbers numbersI">·</div>
+				<div class="numbers numbersJ">·</div>
+				<div class="numbers numbersK">·</div>
+				<div class="numbers numbersL">·</div>
+			</div>
+
+			<div class="numberContainers number11">
+				<div class="numbers numbersA">·</div>
+				<div class="numbers numbersB">·</div>
+				<div class="numbers numbersC">·</div>
+				<div class="numbers numbersD">·</div>
+				<div class="numbers numbersE">·</div>
+				<div class="numbers numbersF">·</div>
+				<div class="numbers numbersG">·</div>
+				<div class="numbers numbersH">·</div>
+				<div class="numbers numbersI">·</div>
+				<div class="numbers numbersJ">·</div>
+				<div class="numbers numbersK">·</div>
+				<div class="numbers numbersL">·</div>
+			</div>
+
+			<div class="numberContainers number12">
+				<div class="numbers numbersA">12</div>
+				<div class="numbers numbersB">12</div>
+				<div class="numbers numbersC">12</div>
+				<div class="numbers numbersD">12</div>
+				<div class="numbers numbersE">12</div>
+				<div class="numbers numbersF">12</div>
+				<div class="numbers numbersG">12</div>
+				<div class="numbers numbersH">12</div>
+				<div class="numbers numbersI">12</div>
+				<div class="numbers numbersJ">12</div>
+				<div class="numbers numbersK">12</div>
+				<div class="numbers numbersL">12</div>
+			</div>
+
+		</div>
+	</div>
+	<script src="script.js">
+
+	</script>
+</body>
+
+</html>

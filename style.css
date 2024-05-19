@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  color-scheme: dark light;
+}
+body{
+  position: relative;
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+.text {
+  position: relative;
+  bottom: 10em;
+}
+.clockContainer {
+  position: absolute;
+  transform-style: preserve-3d;
+  perspective-origin: 50% calc(50% - 3em);
+  perspective: 144em;
+}
+#clock {
+  position: absolute;
+  scale: .618;
+  transform-style: preserve-3d;
+  animation: moveClock 13s infinite alternate ease-in-out;
+}
+@keyframes moveClock {
+  0% {transform:  rotateX(6deg)rotateY(-4.5deg) ;}
+  50% {transform:   rotateX(3.0deg) rotateY(4.5deg);} 
+  100% {transform:   rotateX(0deg) rotateY(-4.5deg);} 
+}
+.clockFace {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: -17em;
+  left: -17em;
+  transform: translateZ(-.73em);
+}
+
+.clockFaces {
+  position: absolute;
+  width: 34em;
+  height: 34em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+  border: .5em solid rgb(28, 28, 28);
+  box-shadow: 0em .1em 0 .04em black inset, 0em .1em 0 .01em black;
+  transform-style: preserve-3d;
+}
+.clockFace1 {
+  background-image: radial-gradient(circle at center, rgba(255, 162, 0, 0.1) 8%, transparent 67%, rgba(255, 213, 0, 0.21) 70%);
+  transform: translateZ(.75em);
+}
+.clockFace2 {transform: translateZ(0.65em);}
+.clockFace3 {transform: translateZ(0.53em);}
+.clockFace4 {transform: translateZ(0.41em);}
+.clockFace5 {transform: translateZ(0.29em);}
+.clockFace6 {transform: translateZ(0.17em);}
+.clockFace7 {transform: translateZ(0.05em);}
+.clockFace8 {transform: translateZ(-0.07em);}
+.clockFace9 {transform: translateZ(-0.19em);}
+.clockFace10 { transform: translateZ(-0.31em);}
+.clockFace11 {transform: translateZ(-0.43em);}
+.clockFace12 {
+  background-image: radial-gradient(black 2%, rgb(255, 119, 0) 3%, rgba(255, 242, 0, 0.2) 8%, rgba(255, 200, 0, 0.89) 13%, transparent 55%),
+  repeating-conic-gradient(
+      from 0deg,
+      rgb(255, 136, 0) 0deg .5deg,
+      rgba(220, 220, 220, 0.21) 0.5deg 1deg,
+      rgba(110, 110, 110, .21) 1deg 6deg,
+      rgba(220, 220, 220, .21) 6deg 12deg, 
+      rgba(110, 110, 110, .21) 12deg 18deg, 
+      rgba(220, 220, 220, .21) 18deg 24deg,
+      rgba(110, 110, 110, .21) 24deg 29deg,
+      rgba(220, 220, 220, .21) 29deg 29.5deg,
+      rgb(255, 179, 0) 29.5deg 30deg
+  );
+  background-size: /*32.3%;*/ 100%;
+  transform: translateZ(-0.55em);
+}
+.clockBack {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 34em;
+  height: 34em;
+  background-color: black;
+  border-radius: 50%;
+  border: .5em solid rgb(28, 28, 28);
+  transform: translateZ(-0.67em);
+}
+.clockShadow {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: -2em;
+  left: -7em;
+  width: 50em;
+  height: 50em;
+  border-radius: 50%;
+  background-size: 100%;
+  transform: translateZ(-11em) rotateX(40deg);}
+#amPMContainer {
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translate3D(0.15em, 2.3em, -.33em); 
+  color: rgb(13, 13, 13);
+  text-shadow: 0 .015em .04em rgba(3, 3, 3, .95), 0 -.005em .02em rgba(144, 144, 144, .67);
+  font-size: 3.3em;
+  font-weight: 900;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.amPM {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 3em;
+  height: 1em;
+  text-align: center;
+}
+.amPM1 {transform: translate(-50%, -50%)  translateZ(0.06em);text-shadow:none;}
+.amPM2 {transform: translate(-50%, -50%)  translateZ(0.05em);}
+.amPM3 {transform: translate(-50%, -50%)  translateZ(0.04em);}
+.amPM4 {transform: translate(-50%, -50%)  translateZ(0.03em);}
+.amPM5 {transform: translate(-50%, -50%)  translateZ(0.02em);}
+.amPM6 {transform: translate(-50%, -50%)  translateZ(0.01em);}
+.amPM7 {transform: translate(-50%, -50%)  translateZ(0.0em);}
+.amPM8 {transform: translate(-50%, -50%)  translateZ(-0.01em);}
+.amPM9 {transform: translate(-50%, -50%)  translateZ(-0.02em);}
+.amPM10 {transform: translate(-50%, -50%)  translateZ(-0.03em);}
+.amPM11 {transform: translate(-50%, -50%)  translateZ(-0.04em);}
+.amPM12 {transform: translate(-50%, -50%)  translateZ(-0.05em); text-shadow: 0 .05em .13em rgba(3, 3, 3, .55)}
+  
+.clockCenterNut {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: .5em;
+  height: .5em;
+  background-color: black;
+  border-radius: 50%;
+  box-shadow: 0 0 .15em white inset;
+  top: 9.75em;
+  left: 0em;
+}
+.hands {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: .639em;
+  left: .55em;
+}
+#hour {
+  position: absolute;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  width: 1em;
+  height: 5.05em;
+  background-color: rgb(21, 21, 21);
+  top: -2.7625em;
+  left: -.5em;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border: .18em solid rgb(255,170, 0);
+  border-bottom: .25em solid rgb(199, 199, 199);
+  border-top: .5em solid rgb(24, 155, 32);
+}@keyframes rotateHourHand {
+  0% {transform:rotateZ(0deg) translateY(-3em) translateZ(-.5em);}
+  100% {transform:rotateZ(360deg) translateY(-3em) translateZ(-.5em);}
+}
+.hourShadow {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 1em;
+  height: 5.05em;
+  background-color: rgba(13, 13, 13, .6);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  box-shadow: 0em 0em .055em .034em rgba(13, 13, 13, .5);
+  transform: translateZ(-0.5em);
+}
+#minute {
+  position: absolute;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  width: 1em;
+  height: 9em;
+  top: -4.9em;
+  left: -.5em;
+  background-color: black;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  border: .18em solid rgb(255, 170, 0);
+  border-bottom: .25em solid rgb(199, 199, 199);
+  border-top: .5em solid rgb(24, 155, 32);
+}@keyframes rotateMinuteHand {
+  0% {transform:rotateZ(0deg) translateY(-3.5em) translateZ(-.3em);}
+  100% {transform:rotateZ(360deg) translateY(-3.5em) translateZ(-.3em);}
+}
+.minuteShadow {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 1em;
+  height: 9em;
+  background-color: rgba(13, 13, 13, .6);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  box-shadow: 0em 0em .1em .05em rgba(13, 13, 13, .5);
+  transform: translateZ(-0.5em);
+}
+#second {
+  position: absolute;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  width: .5em;
+  height: 13em;
+  top: -6.75em;
+  left: -.25em;
+  background-color: rgb(199, 199, 199);
+  border-radius: 50%;
+}@keyframes rotateSecondHand {
+  0% {transform:rotateZ(0deg) translateY(-3.5em);}
+  100% {transform:rotateZ(360deg) translateY(-3.5em);}
+}
+.secondShadow {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: .5em;
+  height: 13em;
+  background-color: rgba(13, 13, 13, .6);
+  border-radius: 50%;
+  box-shadow: 0em 0em .1em .05em rgba(13, 13, 13, .5);
+  transform: translateZ(-0.5em);
+}
+#millisecond {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: .7em;
+  height: .7em;
+  top: -.654em;
+  left: -.46em;
+  border: .1em solid white;
+  border-radius: 50%;
+}@keyframes moveMillisecond {
+  0% {transform: rotateZ(0deg) translateY(-2.65em);}
+  100% {transform:rotateZ(360deg) translateY(-2.65em);}
+}
+.millisecondHandShadow {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: .7em;
+  height: .7em;
+  border: .1em solid rgba(13, 13, 13, .6);
+  border-radius: 50%;
+  box-shadow: 0em 0em .1em .05em rgba(13, 13, 13, .5);
+  transform: translateZ(-0.5em);
+}
+.millisecondHandStem {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: .3em;
+  height: 2em;
+  background-color: rgb(199, 199, 199);
+  transform: translate(.2em, .7em);
+  box-shadow: 0 .089em .1em .1em black inset;
+}
+.millisecondHandStemShadow {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: .3em;
+  height: 2em;
+  background-color: rgba(13, 13, 13, .6);
+  box-shadow: 0em 0em .1em .05em rgba(13, 13, 13, .5);
+  transform: translate(.2em, .8em) translateZ(-0.5em);
+}
+.numberContainers {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: .34em;
+  left: .5em;
+}
+.number1 {transform: translateX(5.4em) translateY(-9.6em) translateZ(-1em);}
+.number2 {transform: translateX(9.4em) translateY(-5.6em) translateZ(-1em);}
+.number3 {transform: translateX(12.5em) translateY(0em) translateZ(-1em);}
+.number4 {transform: translateX(9.32em) translateY(5.25em) translateZ(-1em);}
+.number5 {transform: translateX(5.35em) translateY(9.2em) translateZ(-1em);}
+.number6 {transform: translateX(0em) translateY(12.5em) translateZ(-1em);}
+.number7 {transform: translateX(-5.35em) translateY(9.2em) translateZ(-1em);}
+.number8 {transform: translateX(-9.32em) translateY(5.25em) translateZ(-1em);}
+.number9 {transform: translateX(-12.5em) translateY(0em) translateZ(-1em);}
+.number10 {transform: translateX(-9.4em) translateY(-5.6em) translateZ(-1em);}
+.number11 {transform: translateX(-5.4em) translateY(-9.6em) translateZ(-1em);}
+.number12 {transform: translateX(0em) translateY(-12.5em) translateZ(-1em);}
+
+.numbers {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  color: rgb(164, 154, 135);
+  font-size: 5.5em;
+  font-weight: 900;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.numbersA {
+transform: translate(-50%, -50%) translateZ(0.06em);
+text-shadow: 
+  0 .015em .04em rgba(13, 13, 13, .13), 
+  0 -.005em .02em rgba(144, 144, 144, .89);
+}
+.numbersB {
+transform: translate(-50%, -50%) translateZ(0.05em);
+text-shadow: 0 .015em .04em rgba(5, 5, 5, .21), 
+  0 -.005em .02em rgba(144, 144, 144, .89);
+}
+.numbersC {
+transform: translate(-50%, -50%) translateZ(0.04em);
+text-shadow: 0 .015em .04em rgba(5, 5, 5, .34), 
+  0 -.005em .02em rgba(144, 144, 144, .67);
+}
+.numbersD {
+transform: translate(-50%, -50%) translateZ(0.03em);
+text-shadow: 
+  0 .015em .04em rgba(5, 5, 5, .34), 
+  0 -.005em .02em rgba(144, 144, 144, .67);
+}
+.numbersE {
+transform: translate(-50%, -50%) translateZ(0.02em);
+text-shadow: 
+  0 .015em .04em rgba(5, 5, 5, .55), 
+  0 -.005em .02em rgba(144, 144, 144, .67);
+}
+.numbersF {
+transform: translate(-50%, -50%) translateZ(0.01em);
+text-shadow: 
+  0 .015em .04em rgba(5, 5, 5, .55), 
+  0 -.005em .02em rgba(144, 144, 144, .67);
+}
+.numbersG {
+transform: translate(-50%, -50%) translateZ(0.0em);
+text-shadow: 
+  0 .015em .04em rgba(3, 3, 3, .89), 
+  0 -.005em .02em rgba(144, 144, 144, .55);
+}
+.numbersH {
+transform: translate(-50%, -50%) translateZ(-0.01em);
+text-shadow: 
+  0 .015em .04em rgba(3, 3, 3, .89), 
+  0 -.005em .02em rgba(144, 144, 144, .34);
+}
+.numbersI {
+transform: translate(-50%, -50%) translateZ(-0.02em);
+text-shadow: 0 .015em .04em rgba(0, 0, 0, .89);
+}
+.numbersJ {
+transform: translate(-50%, -50%) translateZ(-0.03em);
+text-shadow: 0 .015em .04em rgba(0, 0, 0, .963);
+}
+.numbersK {
+transform: translate(-50%, -50%) translateZ(-0.04em);
+text-shadow: 0 .015em .089em rgba(0, 0, 0, .963);
+}
+.numbersL {
+transform: translate(-50%, -50%) translateZ(-0.05em); 
+text-shadow: 0 .015em .18em rgb(0, 0, 0)
+}
